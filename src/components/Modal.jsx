@@ -10,8 +10,6 @@ const Modal = ({ isVisible, onClose, chapterTitle }) => {
     question3: "",
   });
 
-  if (!isVisible) return null;
-
   // Handle input change
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -29,9 +27,12 @@ const Modal = ({ isVisible, onClose, chapterTitle }) => {
     onClose(); // Close the modal after submission
   };
 
+  // Return null if the modal is not visible
+  if (!isVisible) return null;
+
   return (
-    <div className="w-[800px] h-vh fixed inset-0 bg-white mx-auto animate-slide-up text-black">
-      <div className="bg-white p-4 rounded w-[400px]">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+      <div className="bg-white p-4 rounded w-[400px] animate-slide-up">
         <h2>{chapterTitle}</h2>
         <form onSubmit={handleSubmit}>
           <div className="mt-4">
@@ -74,6 +75,13 @@ const Modal = ({ isVisible, onClose, chapterTitle }) => {
             />
           </div>
           <div className="mt-4 flex justify-end">
+            <button
+              type="button"
+              onClick={onClose}
+              className="mr-2 p-2 bg-gray-300 rounded"
+            >
+              Cancel
+            </button>
             <button
               type="submit"
               className="p-2 bg-blue-500 text-white rounded"
