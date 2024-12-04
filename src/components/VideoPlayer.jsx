@@ -21,14 +21,14 @@ const VideoPlayer = (props) => {
     { start: 10, title: "Chapter Test 2" },
     { start: 60, title: "Chapter 1" },
     { start: 120, title: "Chapter 2" },
-    { start: 180, title: "Chapter 3" },
-    { start: 240, title: "Chapter 4" },
-    { start: 300, title: "Chapter 5" },
-    { start: 360, title: "Chapter 6" },
-    { start: 420, title: "Chapter 7" },
-    { start: 480, title: "Chapter 8" },
-    { start: 540, title: "Chapter 9" },
-    { start: 600, title: "Chapter 10" },
+    // { start: 180, title: "Chapter 3" },
+    // { start: 240, title: "Chapter 4" },
+    // { start: 300, title: "Chapter 5" },
+    // { start: 360, title: "Chapter 6" },
+    // { start: 420, title: "Chapter 7" },
+    // { start: 480, title: "Chapter 8" },
+    // { start: 540, title: "Chapter 9" },
+    // { start: 600, title: "Chapter 10" },
   ];
 
   useEffect(() => {
