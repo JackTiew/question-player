@@ -3,14 +3,14 @@
 import React, { useState } from "react";
 
 const Modal = ({ isVisible, onClose, chapterTitle }) => {
-  if (!isVisible) return null;
-
   // State to manage answers
   const [answers, setAnswers] = useState({
     question1: "",
     question2: "",
     question3: "",
   });
+
+  if (!isVisible) return null;
 
   // Handle input change
   const handleInputChange = (e) => {
